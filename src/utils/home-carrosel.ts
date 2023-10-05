@@ -9,7 +9,7 @@ export const homeCarrosel = () => {
     fixedWidth: 385, // Uncomment this line
     fixedHeight: 414, // Uncomment this line
     isNavigation: true, // Uncomment this line
-    gap: 24,
+    gap: 23,
     pagination: false,
     cover: true, // Uncomment this line
     dragMinThreshold: {
