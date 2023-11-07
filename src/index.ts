@@ -1,7 +1,3 @@
-import { gsap } from 'gsap';
-import { Flip } from 'gsap/Flip';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 import initializeButtonEffect from './Global-Codes/button-effect_code';
 import { homeCarrosel } from './utils/home-carrosel';
 import { mainNavbar } from './utils/main-navbar';
@@ -13,4 +9,3 @@ homeCarrosel();
 initializeButtonEffect();
 
 // Register GSAP plugins
-gsap.registerPlugin(Flip, ScrollTrigger);

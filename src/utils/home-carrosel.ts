@@ -1,5 +1,6 @@
 // Start of Splide Carrosel
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// @ts-nocheck
 import Splide from '@splidejs/splide';
 
 export const homeCarrosel = () => {
@@ -9,8 +10,12 @@ export const homeCarrosel = () => {
     fixedHeight: 414,
     isNavigation: true,
     focus: 'center',
+    waitForTransition: false,
+    updateOnMove: true,
     trimSpace: true,
     gap: 23,
+    arrows: 'slider', // 'slider' or false
+
     pagination: false,
     cover: true,
     dragMinThreshold: {
@@ -20,7 +25,6 @@ export const homeCarrosel = () => {
     type: 'slide',
     drag: 'free',
     snap: true,
-    // perPage: 3, // You have perPage: 3 already defined above, no need to duplicate it.
     breakpoints: {
       768: {
         fixedWidth: 260,
