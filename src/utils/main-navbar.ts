@@ -1,12 +1,6 @@
-// @ts-ignore
 import { gsap } from 'gsap';
-// @ts-ignore
-
 import { Flip } from 'gsap/Flip';
-// @ts-ignore
-
 import $ from 'jquery';
-
 
 export const mainNavbar = () => {
   $('.nav_wrap').each(function () {
@@ -23,13 +17,13 @@ export const mainNavbar = () => {
     const tl = gsap.timeline({ paused: true });
     const openClass = 'nav-open';
 
-    function flip(forwards) {
+    function flip(forwards: boolean) {
       const state = Flip.getState(flipItemEl);
       flipItemEl.appendTo(forwards ? menuContainEl : hamburgerEl);
       Flip.from(state, { duration: flipDuration });
     }
 
-    function openMenu(open) {
+    function openMenu(open: boolean) {
       if (!tl.isActive()) {
         if (open) {
           tl.play();
@@ -62,11 +56,11 @@ export const mainNavbar = () => {
         },
       });
 
-    hamburgerEl.on('click', function () {
+    hamburgerEl.on('click', function (this: HTMLElement) {
       openMenu(!$(this).hasClass(openClass));
     });
 
-    menuBaseEl.on('mouseenter click', function () {
+    menuBaseEl.on('mouseenter click', function (this: HTMLElement) {
       openMenu(false);
     });
 
@@ -76,4 +70,4 @@ export const mainNavbar = () => {
       }
     });
   });
-}
+};
