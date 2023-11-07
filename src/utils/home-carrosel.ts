@@ -48,14 +48,14 @@ export const homeCarrosel = () => {
 
   //check if btnNext is not null before adding event listener
   if (btnNext) {
-    btnNext.addEventListener('click', (e) => {
+    btnNext.addEventListener('click', () => {
       splide.go('+1');
     });
   }
 
   if (btnPrev) {
-    btnPrev.addEventListener('click', (e) => {
-      splide.go('+1');
+    btnPrev.addEventListener('click', () => {
+      splide.go('-1');
     });
   }
 
