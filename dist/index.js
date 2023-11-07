@@ -14065,7 +14065,6 @@
 
   // src/utils/home-carrosel.ts
   var homeCarrosel = () => {
-    let splides = "#slider1";
     const splide = new Splide("#slider1", {
       perPage: 4,
       perMove: 1,
@@ -14084,7 +14083,7 @@
       dragAngleThreshold: 30,
       // default is 30
       autoWidth: false,
-      // for cards with differing widths
+      // for1 cards with differing widths
       rewind: false,
       // go back to beginning when reach end
       rewindSpeed: 400,
@@ -14117,13 +14116,17 @@
     });
     const btnNext = document.querySelector(".seta-splide.seta-next");
     const btnPrev = document.querySelector(".seta-splide.seta-prev");
+    if (btnNext) {
+      btnNext.addEventListener("click", (e) => {
+        splide.go("+1");
+      });
+    }
+    if (btnPrev) {
+      btnPrev.addEventListener("click", (e) => {
+        splide.go("+1");
+      });
+    }
     splide.mount();
-    btnNext.addEventListener("click", (e) => {
-      splide.go("+1");
-    });
-    btnPrev.addEventListener("click", (e) => {
-      splide.go("-1");
-    });
   };
 
   // src/utils/main-navbar.ts

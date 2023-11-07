@@ -3,8 +3,6 @@
 import Splide from '@splidejs/splide';
 
 export const homeCarrosel = () => {
-  let splides = '#slider1';
-
   const splide = new Splide('#slider1', {
     perPage: 4,
     perMove: 1,
@@ -15,7 +13,7 @@ export const homeCarrosel = () => {
     pagination: false, // 'slider' or false
     speed: 1500, // transition speed in miliseconds
     dragAngleThreshold: 30, // default is 30
-    autoWidth: false, // for cards with differing widths
+    autoWidth: false, // for1 cards with differing widths
     rewind: false, // go back to beginning when reach end
     rewindSpeed: 400,
     waitForTransition: false,
@@ -48,16 +46,20 @@ export const homeCarrosel = () => {
   const btnNext = document.querySelector('.seta-splide.seta-next');
   const btnPrev = document.querySelector('.seta-splide.seta-prev');
 
+  //check if btnNext is not null before adding event listener
+  if (btnNext) {
+    btnNext.addEventListener('click', (e) => {
+      splide.go('+1');
+    });
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener('click', (e) => {
+      splide.go('+1');
+    });
+  }
+
   splide.mount();
-
-  //attach events to custom buttons
-  btnNext.addEventListener('click', (e) => {
-    splide.go('+1');
-  });
-
-  btnPrev.addEventListener('click', (e) => {
-    splide.go('-1');
-  });
 
   // End of Splide Carrosel
 };

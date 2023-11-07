@@ -50,8 +50,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "loconative-scroll": "github:quentinhocde/loconative-scroll",
-    "prettier": "^2.8.8",
-    "typescript": "^5.2.2"
+    "prettier": "^2.8.8"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
