@@ -1,8 +1,16 @@
 import { gsap } from 'gsap';
+import { Draggable } from 'gsap/Draggable';
 import { Flip } from 'gsap/Flip';
 import $ from 'jquery';
 
+gsap.registerPlugin(Draggable);
+
 export const mainNavbar = () => {
+  Draggable.create('.nav_wrap', {
+    bounds: document.getElementsByClassName('page-wrapper'),
+    inertia: true,
+  });
+
   $('.nav_wrap').each(function () {
     const $this = $(this);
     const hamburgerEl = $this.find('.nav_hamburger_wrap');
